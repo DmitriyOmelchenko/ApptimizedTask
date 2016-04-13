@@ -34,19 +34,18 @@ namespace ApptimizedTask
             int deltaFileNumber = 0;
 
             // Create the file.
-            using (FileStream filesStreamRead = File.OpenRead(BaseFile.FullName))
+            using (BinaryReader binaryReader = new BinaryReader(BaseFile.OpenRead()))
             {
 
-                //fs.ReadAsync(info, currentIndex, nextIndex);
                 int bytesRead;
                 byte[] buffer = new byte[50000000];
-                while ((bytesRead = filesStreamRead.Read(buffer, 0, buffer.Length)) > 0)
+                while ((bytesRead = binaryReader.Read(buffer, 0, buffer.Length)) > 0)
                 {
                     deltaFileNumber++;
-                    using (FileStream filesStreamWrite = File.Create(directoryPath + @"\" + deltaFileNumber, bytesRead))
+                    using (BinaryWriter binaryWriter = new BinaryWriter(File.Create(directoryPath + @"\" + deltaFileNumber, bytesRead)))
                     {
                         // Add some information to the file.
-                        filesStreamWrite.Write(buffer, 0, bytesRead);
+                        binaryWriter.Write(buffer, 0, bytesRead);
                     }
                 }
             }
