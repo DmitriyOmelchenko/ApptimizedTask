@@ -12,3 +12,17 @@ C:\Users\pervolo\Documents\Visual Studio 2015\Projects\ApptimizedTask\Apptimized
 C:\Users\pervolo\Documents\Visual Studio 2015\Projects\ApptimizedTask\ApptimizedTask\ApptimizedTask\obj\Debug\ApptimizedTask.csproj.GenerateResource.Cache
 C:\Users\pervolo\Documents\Visual Studio 2015\Projects\ApptimizedTask\ApptimizedTask\ApptimizedTask\obj\Debug\ApptimizedTask.exe
 C:\Users\pervolo\Documents\Visual Studio 2015\Projects\ApptimizedTask\ApptimizedTask\ApptimizedTask\obj\Debug\ApptimizedTask.pdb
+C:\Users\pervolo\Documents\Visual Studio 2015\Projects\ApptimizedTask\ApptimizedTask\bin\Debug\ApptimizedTask.exe.config
+C:\Users\pervolo\Documents\Visual Studio 2015\Projects\ApptimizedTask\ApptimizedTask\obj\Debug\ApptimizedTask.exe
+C:\Users\pervolo\Documents\Visual Studio 2015\Projects\ApptimizedTask\ApptimizedTask\obj\Debug\ApptimizedTask.pdb
+C:\Users\pervolo\Documents\Visual Studio 2015\Projects\ApptimizedTask\ApptimizedTask\bin\Debug\ApptimizedTask.exe
+C:\Users\pervolo\Documents\Visual Studio 2015\Projects\ApptimizedTask\ApptimizedTask\bin\Debug\ApptimizedTask.pdb
+C:\Users\pervolo\Documents\Visual Studio 2015\Projects\ApptimizedTask\ApptimizedTask\obj\Debug\ApptimizedTask.csprojResolveAssemblyReference.cache
+C:\Users\pervolo\Documents\Visual Studio 2015\Projects\ApptimizedTask\ApptimizedTask\obj\Debug\MainWindow.g.cs
+C:\Users\pervolo\Documents\Visual Studio 2015\Projects\ApptimizedTask\ApptimizedTask\obj\Debug\App.g.cs
+C:\Users\pervolo\Documents\Visual Studio 2015\Projects\ApptimizedTask\ApptimizedTask\obj\Debug\ApptimizedTask_MarkupCompile.cache
+C:\Users\pervolo\Documents\Visual Studio 2015\Projects\ApptimizedTask\ApptimizedTask\obj\Debug\ApptimizedTask_MarkupCompile.lref
+C:\Users\pervolo\Documents\Visual Studio 2015\Projects\ApptimizedTask\ApptimizedTask\obj\Debug\MainWindow.baml
+C:\Users\pervolo\Documents\Visual Studio 2015\Projects\ApptimizedTask\ApptimizedTask\obj\Debug\ApptimizedTask.g.resources
+C:\Users\pervolo\Documents\Visual Studio 2015\Projects\ApptimizedTask\ApptimizedTask\obj\Debug\ApptimizedTask.Properties.Resources.resources
+C:\Users\pervolo\Documents\Visual Studio 2015\Projects\ApptimizedTask\ApptimizedTask\obj\Debug\ApptimizedTask.csproj.GenerateResource.Cache

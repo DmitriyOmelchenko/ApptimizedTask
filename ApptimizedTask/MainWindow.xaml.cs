@@ -28,28 +28,29 @@ namespace ApptimizedTask
             
         }
         //creating delta file
-        private void CreateDeltaFile(FileInfo BaseFile, string directoryPath)
+        private int CreateDeltaFile(FileInfo BaseFile, string directoryPath)
         {
 
-            int deltaFileNumber = 1;
-            int currentIndex = 0;
-            int nextIndex=50000000;
-            Byte[] info = File.ReadAllBytes(BaseFile.FullName);
+            int deltaFileNumber = 0;
+
             // Create the file.
-            do
+            using (FileStream filesStreamRead = File.OpenRead(BaseFile.FullName))
             {
-                if (nextIndex > info.Length)
-                    nextIndex = info.Length;
-               using (FileStream fs = File.Create(directoryPath+@"\"+deltaFileNumber, 50000000))
+
+                //fs.ReadAsync(info, currentIndex, nextIndex);
+                int bytesRead;
+                byte[] buffer = new byte[50000000];
+                while ((bytesRead = filesStreamRead.Read(buffer, 0, buffer.Length)) > 0)
                 {
-                    // Add some information to the file.
-                    fs.Write(info.Skip(currentIndex).Take(nextIndex).ToArray(), 0, info.Skip(currentIndex).Take(nextIndex).ToArray().Length);
+                    deltaFileNumber++;
+                    using (FileStream filesStreamWrite = File.Create(directoryPath + @"\" + deltaFileNumber, bytesRead))
+                    {
+                        // Add some information to the file.
+                        filesStreamWrite.Write(buffer, 0, bytesRead);
+                    }
                 }
-                deltaFileNumber++;
-                currentIndex = nextIndex;
-                nextIndex += nextIndex;
-            } while (currentIndex< info.LongLength);
-            
+            }
+            return deltaFileNumber;
         }
         private void OpendButton_Click(object sender, RoutedEventArgs e)
         {
@@ -67,8 +68,8 @@ namespace ApptimizedTask
                     return;
                 }
                
-                    CreateDeltaFile(BaseFile, Environment.CurrentDirectory + @"\Test");
-                MessageBox.Show("Delta file create");
+                   var count= CreateDeltaFile(BaseFile, Environment.CurrentDirectory + @"\Test");
+                MessageBox.Show(String.Format("{0} delta files was create",count));
             }
         }
     }
