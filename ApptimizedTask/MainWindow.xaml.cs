@@ -14,6 +14,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using System.Windows.Threading;
+
+
 
 namespace ApptimizedTask
 {
@@ -51,7 +54,7 @@ namespace ApptimizedTask
             }
             return deltaFileNumber;
         }
-        private void OpendButton_Click(object sender, RoutedEventArgs e)
+        private async void OpendButton_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             //create directory for delta file
@@ -66,8 +69,8 @@ namespace ApptimizedTask
                     MessageBox.Show("File is Empty");
                     return;
                 }
-               
-                   var count= CreateDeltaFile(BaseFile, Environment.CurrentDirectory + @"\Test");
+
+              var count=  await Dispatcher.InvokeAsync(() => CreateDeltaFile(BaseFile, Environment.CurrentDirectory + @"\Test"), DispatcherPriority.Background);
                 MessageBox.Show(String.Format("{0} delta files was create",count));
             }
         }
