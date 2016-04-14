@@ -5,15 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ApptimizedTask"
         mc:Ignorable="d"
-        Title="ApptimizedTask" Height="144.005" Width="200" WindowStyle="ToolWindow">
+        Title="ApptimizedTask" Height="158.457" Width="225.807" WindowStyle="ToolWindow">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="31*"/>
         </Grid.RowDefinitions>
         <!-- Row Label-->
-        <Label HorizontalAlignment="Center" Margin="5">Click for open file</Label>
+        <Label HorizontalAlignment="Center" Margin="58,5">Click for open file</Label>
         <!--   Row openbutton -->
-        <Button x:Name="OpendButton" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Grid.Row="1" Click="OpendButton_Click">Open</Button>
+        <Button x:Name="OpendButton" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Grid.Row="2" Click="OpendButton_Click" Grid.RowSpan="2">Open &amp; Upload</Button>
+        <!-- Row ProgressBar -->
+        <ProgressBar x:Name="StatusProgressBar" HorizontalAlignment="Stretch"  Margin="10,5" Grid.Row="1" VerticalAlignment="Stretch"/>
     </Grid>
 </Window>
